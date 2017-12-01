@@ -1,0 +1,184 @@
+html, body,
+dl, dt, dd, ol, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+}
+
+input[type="checkbox"] {
+    margin-left: 0;
+    margin-right: 0;
+}
+input:focus{
+  border:none;
+  box-shadow: none;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #999 !important;
+  font-family: '微软雅黑 Regular','微软雅黑',Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+}
+input:-moz-placeholder {
+  color: #999 !important;
+  font-family: '微软雅黑 Regular','微软雅黑',Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+}
+input::-moz-placeholder {
+  color: #999 !important;
+  font-family: '微软雅黑 Regular','微软雅黑',Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+}
+input::-ms-input-placeholder {
+  color: #999 !important;
+  font-family: '微软雅黑 Regular','微软雅黑',Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+.clearfix {
+  zoom: 1;
+  display: table;
+  width: 100%;
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+  }
+}
+
+td{
+  &.left {
+    text-align: left;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align: center;
+  }
+  &.top {
+    vertical-align: top;
+  }
+  &.middle {
+    vertical-align: middle;
+  }
+  &.bottom {
+    vertical-align: bottom;
+  }
+}
+
+body {
+  font-size: 12px;
+  font-family: '微软雅黑 Regular','微软雅黑',Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
+  color: #1b1b1b;
+  letter-spacing: -.3px;
+  background: #f8f8f8;
+}
+section{
+  padding-top: 10px;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+#hmall-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.notice:before {
+  display: inline;
+  content: "*";
+  color: #fe0000;
+  letter-spacing: 6px;
+}
+
+.notice-word {
+  color: #fe0000;
+}
+
+.error-msg {
+  &:before {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    vertical-align: middle;
+    background-image: url('images/error.png');
+    content: '';
+  }
+  color: #fe0000;
+}
+
+.loading {
+  display: block !important;
+  background-image: url('images/loading_50.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100px;
+}
+/**底部翻页修改**/
+.ant-pagination{
+  li{
+    border-radius:15px;
+  }
+  li:hover{
+    border:1px solid #f95959;
+  }
+  li:hover a{
+    color:#f95959
+  }
+  .ant-pagination-item-active{
+    background:#f95959;
+    border:1px solid #f95959;
+  }
+  .ant-pagination-item-active:hover a{
+    color:#fff !important;
+  }
+  .ant-pagination-options-quick-jumper input:hover{
+    border:1px solid #f95959;
+  }
+  .ant-pagination-options-quick-jumper input:active{/*文本框获取激活时的样式*/
+    border:1px solid #f95959;
+  }
+  .ant-pagination-options-quick-jumper input:focus{/*文本框获取焦点时的样式*/
+    border:#ccc 1px solid;
+    box-shadow: none;
+    outline: none;
+  }
+  .ant-pagination-jump-next:hover{
+    border:none;
+  }
+}
+/**表格的border-radius**/
+.ant-table{
+  border-radius:0px;
+  table{
+    border-radius:0px;
+  }
+}
+.ant-btn{
+  border-radius:0px;
+}
+/**背景css**/
+.account-panel{
+  background:none!important;
+}
+.ant-card-body{
+  padding:0px 10px 10px 10px!important;
+}
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>hmset-window</title>
+
+<style type="text/css">
+    body {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+table{
+    width: 800px;
+    border-style: thin;
+    border-collapse: 0;
+    border-spacing: 0;
+}
+</style>
+
+<script type="text/javascript"  src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+        $("button").click(function(){
+            var type=$("#type").val();
+            var code=$("#code").val();
+            var jsonData=$("#jsonData").val();
+            $.ajax({
+                    type : "GET",
+                    url : "/data/hmset",
+                    data:{type:type,code:code,data:jsonData},
+                    success : function(data) {
+                       $("#resptb").show();
+                       $("#respData").html(data);
+
+                    }
+                });
+        });
+
+});
+</script>
+</head>
+<body>
+<table border="1" >
+    <caption align="top"><strong>请求数据填写</strong></caption>
+    <tr>
+        <td>type</td><td><input id="type" type="text" value=PPO /></td>
+    </tr>
+    <tr>
+        <td>code</td><td><input id="code"  type="text" value="002" /></td>
+    </tr>
+    <tr>
+        <td>data</td><td><textarea id="jsonData" rows="5" cols="100" >{"firstName":"Jason","lastName":"Hunter","email":"bbbb"}</textarea></td>
+    </tr>
+     <tr>
+        <td colspan="2"><button>提交</button></td>
+    </tr>
+
+</table>
+
+<table id="resptb" style="display:none;" border="1" >
+    <caption align="top"><strong>响应结果</strong></caption>
+    <tr>
+        <td width="100px"><span>Response:</span></td><td><span id="respData"></span></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
